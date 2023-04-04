@@ -1,6 +1,4 @@
-import '@babel/polyfill';
-
-import app from './server'
+const app = require('./server')
 
 
 
@@ -9,4 +7,5 @@ async function main(){
    
    console.log('Server on port', app.get('port'));
 }
+
 main();

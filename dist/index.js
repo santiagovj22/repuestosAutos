@@ -1,4 +1,9 @@
-"use strict";
+import '@babel/polyfill';
+import app from './server';
 
-var test = 'test';
-console.log(test);
+async function main() {
+  await app.listen(app.get('port'));
+  console.log('Server on port', app.get('port'));
+}
+
+main();

@@ -1,12 +1,10 @@
-import { Router} from 'express'
+const { Router} = require('express')
 
 const router = Router();
 
 router.get('/',(req,res) =>{
-    res.send(
-        'Bienvenido a la tienda de repuestos para autos:   routes: /marcas , /productos , /servicios , /tasks'
-        
+    res.json({message: 'Welcome to my API'}
     )
 })
 
-export default router;
+module.exports = router;
